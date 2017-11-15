@@ -4,6 +4,7 @@
     "name": "dru"
   },
   "apps": [
+
     {
       "root": "src",
       "outDir": "dist",
@@ -21,6 +22,11 @@
       "styles": [
         "styles.scss"
       ],
+      "stylePreprocessorOptions": {
+        "includePaths": [
+          "."
+        ]
+      },
       "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
@@ -54,6 +60,14 @@
     }
   },
   "defaults": {
+    "spec": {
+      "class": false,
+      "component": false,
+      "directive": false,
+      "module": false,
+      "pipe": false,
+      "service": false
+    },
     "styleExt": "scss",
     "component": {}
   }
