@@ -1,0 +1,36 @@
+<div class="cues">
+  <div *ngFor="let cueValue of cueValues" class="cue-box-wrap">
+    <div class="cue-header-wrap">
+      <div class="cue-header-value-wrap">
+        <div class="cue-header-text">
+          {{cueValue.headerText}}
+        </div>
+        <div class="cue-header-arrow-icon" [ngClass] = "{'hiddenArrow': !cueValue.headerHasOptions}">
+          <i class="material-icons">arrow_drop_down</i>
+        </div>
+      </div>
+      <div class="cue-header-more-icon">
+        <i class="material-icons icon-to-left">more_vert</i>
+      </div>
+    </div>
+    <div class="cue-body-wrap">
+      <div class="cue-body-bigValue {{cueValue.bodyValueColor}}">
+        {{cueValue.bodyValue}}
+      </div>
+      <div class="cue-body-bigValue-info">
+        {{cueValue.bodyText}}
+      </div>
+    </div>
+    <div class="cue-footer-wrap">
+      <div class="cue-footer-icon">
+        <i class="material-icons">{{cueValue.footerIcon}}</i>
+      </div>
+      <div class="cue-footer-text">
+        {{cueValue.footerText}}
+      </div>
+      <div class="cue-footer-value">
+        {{cueValue.footerValue}}
+      </div>
+    </div>
+  </div>
+</div>

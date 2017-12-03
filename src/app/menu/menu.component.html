@@ -1,0 +1,34 @@
+<div class="menuWrap" *ngFor="let menuItem of menu">
+  <div class="categoryTitle">
+    {{menuItem.title}}
+  </div>
+  <div class="subcategoryWrap" *ngFor="let subcategory of menuItem.items">
+    <div (click)="expand(subcategory)" class="wrap-with-badge">
+      <div class="subcategorySmallWrap">
+        <div class="subcategoryIcon">
+          <i class="material-icons">{{subcategory.icon}}</i>
+        </div>
+        <div class="subcategoryTitle">
+          {{subcategory.title}}
+        </div>
+      </div>
+      <div *ngIf="subcategory.subItems;else show_badge">
+        <div class="showMore">
+          <i [@rotateArrow] = 'subcategory.animationStatus' class="material-icons">keyboard_arrow_right</i>
+        </div>
+      </div>
+      <ng-template #show_badge>
+        <div *ngIf="subcategory.badge" class="subcategoryBadge-wrap">
+          <div [ngClass]="[subcategory.badge.shape]" [ngStyle]="{'background-color':subcategory.badge.color}">
+            {{subcategory.badge.title}}
+          </div>
+        </div>
+      </ng-template>
+  </div>
+    <div [@moveMenu] = 'subcategory.animationStatus'>
+      <div *ngFor="let subItems of subcategory.subItems" class="smallCategoryWrap">
+        <div class="wrap-with-badge">{{subItems.title}}</div>
+      </div>
+    </div>
+  </div>
+</div>

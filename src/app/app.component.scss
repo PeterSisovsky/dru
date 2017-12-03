@@ -1,0 +1,117 @@
+.wrapper{
+  width:100%;
+  height: 100%;
+  background-color: goldenrod;
+  display: flex;
+}
+
+.left-nav-wrapper{
+  width: 200px;
+  min-width: 200px;
+  min-height: 100%;
+  height: auto;
+  background-color: #3C4252;
+}
+
+.main{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.top-bar{
+  display: flex;
+  font-size: 14px;
+  background-color: white;
+  width: 100%;
+  min-width: 525px;
+  height: 40px;
+  min-height: 40px;
+  color: #a0a0a0;
+  justify-content: space-between;
+  border-bottom: solid #d6d6d6 1px;
+}
+
+.top-bar  *{
+  display: flex;
+  flex-flow: nowrap row;
+  align-items: center;
+}
+
+.top-bar-leftSide{
+ width: 80%;
+}
+
+.top-bar-search-wrap{
+  width: 100%;
+  border-left: solid 1px #d6d6d6;
+}
+
+.top-bar-search-box{
+  font-size: 12px;
+}
+
+.top-bar-rightSide{
+  min-width: 250px;
+  justify-content: flex-end;
+}
+
+.top-bar-leftSide > div, .top-bar-rightSide > div {
+  height: 100%;
+  /*  background-color: deeppink;*/
+}
+
+.top-bar-icon{
+  width: 40px;
+  justify-content: center;
+  display: flex;
+}
+
+.top-bar-language-code, .top-bar-user-name{
+  color: #6e6e6e;
+}
+
+.top-bar-userInfo-wrap {
+  border-right: solid 1px #d6d6d6;
+}
+
+.top-bar-language-wrap{
+  margin-left: 10px;
+  border-right: 1px solid #d6d6d6;
+}
+
+.content-wrapper{
+  min-width: 525px;
+  height: 100%;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: row;
+  overflow-y: scroll;
+}
+
+.component-wrapper{
+  flex: auto;
+  background-color: white;
+  min-width: 450px;
+  height: 100%;
+}
+
+.right-nav{
+  width: 275px;
+  min-width: 275px;
+  background-color: #eeeeee;
+  height: auto;
+  min-height: 100%;
+  }
+
+.logo{
+  background-color: #495062;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: "Bauhaus 93";
+}
+

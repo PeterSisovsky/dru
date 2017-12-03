@@ -1,0 +1,98 @@
+.github-wrapper{
+  border: solid #dfdfdf 1px;
+  margin-top: 20px;
+  }
+
+.github-header-wrap{
+  display: flex;
+  flex-flow: wrap row;
+  width: 100%;
+  height: 100px;
+  background-color: #58acf2;
+  color: white;
+  }
+
+.github-header-content{
+  margin-top: 15px;
+  display: flex;
+  flex-flow: nowrap row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.github-header{
+  font-size: 20px;
+  font-family: Roboto Light;
+  padding-left: 10px;
+}
+
+.github-menu-wrap{
+  display: flex;
+  flex-flow: nowrap row;
+  align-self: flex-end;
+}
+
+.github-header-menu-item:hover{
+  border-bottom: solid black 2px;
+}
+
+
+.github-menu-item{
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  height: 20px;
+}
+
+.github-menu-item:hover{
+  border-bottom: solid #0377b8 2px;
+  height: 20px;
+}
+
+.github-body-wrap{
+  display: flex;
+  flex-flow: row wrap;
+  }
+
+.github-body-header-wrap{
+  color: #6e6e6e;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.github-body-menu{
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.github-body-menu-item{
+  padding: 10px;
+}
+
+.github-body-menu-item:hover{
+  color: #6e6e6e;
+  background-color: #d5d5d5;
+}
+
+.github-graphPart{
+  display: flex;
+  flex-flow: nowrap row;
+  width: 100%;
+  margin: 15px;
+  height: 200px;
+  }
+
+.github-body-graph-wrapper{
+  flex-grow: 1;
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+.github-body-info-wrapper{
+  flex-grow: 1;
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}

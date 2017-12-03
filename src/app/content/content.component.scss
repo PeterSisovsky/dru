@@ -1,0 +1,77 @@
+.component-header-wrap{
+  background-color: #58acf2;
+  height: 150px;
+  color: white;
+  padding: 20px 20px 0px 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.headerInfoWrap{
+  display: flex;
+}
+
+.headerInfoBox{
+  margin-right: 5px;
+  padding: 10px 15px 5px 15px;
+  background-color: rgba(0,0,0,0.2);
+}
+
+.headerInfoBox:hover {
+  cursor: pointer;
+}
+
+.header-line{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.component-header {
+  font-family: Roboto Light;
+  font-size: 38px;
+}
+
+.header-line > i{
+  color: #444444;
+}
+
+.component-menu{
+  color: #6e6e6e;
+  padding-left: 20px;
+  background-color: white;
+  display: flex;
+  flex-flow: row nowrap;
+  border-bottom: solid #dfdfdf 1px;
+  height: 40px;
+  align-items: center;
+}
+
+.component-menu-item{
+  box-sizing: border-box;
+  height: 100%;
+  border-bottom: solid transparent 2px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+
+.component-menu-item:hover{
+  border-bottom: solid #58acf2 2px;
+}
+
+.components {
+  margin: 20px;
+}
+.cueBoxHolder{
+/*  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;*/
+}
+
+.components-wrapper{
+  //background-color: #6290ee;
+}

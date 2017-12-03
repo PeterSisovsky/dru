@@ -1,0 +1,27 @@
+<div class="components-wrapper">
+  <div class="component-header-wrap">
+    <div class="header-line">
+      <div class="component-header">Welcome back, {{name}}!</div>
+      <i class="material-icons">settings</i>
+    </div>
+    <div class="header-line" style="align-self: flex-end">
+      <div class="headerInfoWrap">
+        <div class="headerInfoBox">
+          ACME Corp. Backend App
+        </div>
+        <div class="headerInfoBox">
+          <i class="material-icons">more_horiz</i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="component-menu">
+    <app-component-menu menuItemsClass="blue-bottom" [menuItems]="menuItems"></app-component-menu>
+  </div>
+  <div class="components">
+    <div class="cueBoxHolder">
+      <app-cuebox [cueValues]="cueValues"></app-cuebox>
+    </div>
+    <div class="githubHolder"><app-github></app-github></div>
+  </div>
+</div>

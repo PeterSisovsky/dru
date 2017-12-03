@@ -1,0 +1,31 @@
+.menuitems-wrap{
+  display: flex;
+  flex-flow: row nowrap;
+  height: 40px;
+  align-items: center;
+}
+
+.blue-bottom{
+  height: 100%;
+  border-bottom: solid transparent 2px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.darkBlue-bottom{
+  color: #e8e8e8;
+  height: 100%;
+  border-bottom: solid transparent 2px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.blue-bottom:hover {
+  border-bottom: solid #58acf2 2px;
+  color: #353535;
+}
+

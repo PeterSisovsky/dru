@@ -1,0 +1,81 @@
+<div class="right-nav-wrapper">
+  <div class="date">
+    <div class="date-smallwrap">
+      <div class="date-bignum">{{myDate | date: 'dd'}}</div>
+      <div class="date-day">
+        <p>{{myDate | date: 'EEEE'}} - {{myDate | date:'HH:mm'}}</p>
+        <h6>{{myDate | date: 'MMMM'}}/{{myDate | date: 'y'}}</h6>
+      </div>
+    </div>
+    <div class="date-more"><i class="material-icons">more_vert</i></div>
+  </div>
+  <div class="weather">
+    <div class="weather-city-wrapper">
+      <i class="material-icons">place</i>
+      <div class="city">{{city}}, {{code}}</div>
+      <i class="material-icons icon-to-left">more_vert</i>
+    </div>
+    <div *ngIf="isLoaded; else placehold" class="weather-temperatue">
+      <div class="weather-icon-wrap">
+        <img [src]="today.iconPath" class="weather-icon-big">
+        <div class="weather-today-temp">{{today.temp}}°</div>
+      </div>
+    </div>
+      <ng-template #placehold>Loading...</ng-template>
+      <div *ngIf="isLoaded"  class="weather-wind">
+        <div class="weather-wind-speed-wrapper">
+          <img class="weather-wind-speed-icon" src="assets/icons/003-wind-turbine.svg">
+          <div class="weather-wind-speed">{{today.windSpeed}}m/s</div>
+        </div>
+        <div class="weather-wind-direction"></div>
+        <div class="weather-wind-humidity-wrapper">
+          <img class="weather-wind-humidity-icon" src="assets/icons/001-speedometer.svg">
+          <div class="weather-wind-humidity">{{today.humidity}}%</div>
+        </div>
+    </div>
+    <div *ngIf="isLoaded" class="weather-3days-wrapper">
+      <div class="weather-3days-1day">
+        <div  class="weather-3days-day">{{secondDay.day | date: 'EEEE'}}</div>
+        <div class="weather-3days-temp">{{secondDay.temp}}°</div>
+        <img [src]="secondDay.iconPath" class="weather-icon-small">
+      </div>
+      <div class="weather-3days-1day">
+        <div  class="weather-3days-day">{{thirdDay.day | date: 'EEEE'}}</div>
+        <div class="weather-3days-temp">{{thirdDay.temp}}°</div>
+        <img [src]="thirdDay.iconPath" class="weather-icon-small">
+      </div>
+      <div class="weather-3days-1day">
+        <div  class="weather-3days-day">{{forthDay.day | date: 'EEEE'}}</div>
+        <div class="weather-3days-temp">{{forthDay.temp}}°</div>
+        <img [src]="forthDay.iconPath" class="weather-icon-small">
+      </div>
+    </div>
+  </div>
+  <div class="notifications">
+    <div class="notifications-headline">
+      <h5>Notifications</h5>
+      <i class="material-icons icon-to-left">more_vert</i>
+    </div>
+    <div class="notifications-post-wrap">
+        <div class="notifications-post-decoration">
+          <div class="circle"></div>
+          <div class="notifications-post-decoration-line"></div>
+        </div>
+        <div class="notifications-post">
+          <p>Alice Freeman uploaded new documents</p>
+          <div class="timeAgo">8 min ago</div>
+      </div>
+    </div>
+    <div class="notifications-post-wrap">
+      <div class="notifications-post-decoration">
+        <div class="circle"></div>
+        <div class="notifications-post-decoration-line"></div>
+      </div>
+      <div class="notifications-post">
+        <p>Alice Freeman uploaded new documents to your public folder</p>
+        <div class="timeAgo">13 min ago</div>
+      </div>
+    </div>
+    <div class="notifications-seeMore">See all notifications...</div>
+  </div>
+</div>
