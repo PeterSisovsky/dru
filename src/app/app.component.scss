@@ -1,7 +1,7 @@
 .wrapper{
   width:100%;
-  height: 100%;
-  background-color: goldenrod;
+  height: auto;
+  min-height:100%;
   display: flex;
 }
 
@@ -15,9 +15,10 @@
 
 .main{
   width: 100%;
+  height: auto;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 
 .top-bar{
@@ -87,11 +88,10 @@
   background-color: #f1f1f1;
   display: flex;
   flex-direction: row;
-  overflow-y: scroll;
 }
 
 .component-wrapper{
-  flex: auto;
+  width: 100%;
   background-color: white;
   min-width: 450px;
   height: 100%;
@@ -105,13 +105,38 @@
   min-height: 100%;
   }
 
-.logo{
+.logo-wrap{
   background-color: #495062;
+  font-size: 14px;
   height: 40px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  color: #f1f1f1;
+}
+
+.logo-wrap:hover{
+  cursor: pointer;
+}
+
+.logo-box{
+  width: 25px;
+  height: 25px;
+  background-color: #58ACF2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.logo > *{
   color: white;
   font-family: "Bauhaus 93";
+  text-decoration: none;
+}
+
+.left-nav{
+  background-color: #3C4252;
 }
 

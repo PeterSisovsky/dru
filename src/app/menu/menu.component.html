@@ -4,11 +4,11 @@
   </div>
   <div class="subcategoryWrap" *ngFor="let subcategory of menuItem.items">
     <div (click)="expand(subcategory)" class="wrap-with-badge">
-      <div class="subcategorySmallWrap">
+      <div routerLink={{subcategory.title}} class="subcategorySmallWrap">
         <div class="subcategoryIcon">
           <i class="material-icons">{{subcategory.icon}}</i>
         </div>
-        <div class="subcategoryTitle">
+        <div  class="subcategoryTitle">
           {{subcategory.title}}
         </div>
       </div>

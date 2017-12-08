@@ -15,10 +15,10 @@ import {
   animations: [
     trigger('moveMenu', [
       state('unrolled', style({
-        /*transform: 'translateY(-100%)',*/ opacity: 1, height: 0, overflow: 'hidden',
+        /*transform: 'translateY(-100%)',*/  height: 0, overflow: 'hidden',
       })),
       state('rolled', style({
-        /*transform: 'translateY(0)',*/ opacity: 1, height: '*', overflow: 'hidden'
+        /*transform: 'translateY(0)',*/  height: '*', overflow: 'hidden'
       })),
       transition('rolled <=> unrolled', animate('300ms ease-in-out')),
     ]),
@@ -49,8 +49,8 @@ export class MenuComponent implements OnInit {
       title: 'Components',
       items: [
         {
-          title: 'E-Commerce',
-          icon: 'shopping_cart',
+          title: 'Form',
+          icon: 'format_list_bulleted',
           badge: {
             title: '1',
             color: '#58acf2',

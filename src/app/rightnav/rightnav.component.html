@@ -1,10 +1,10 @@
 <div class="right-nav-wrapper">
   <div class="date">
     <div class="date-smallwrap">
-      <div class="date-bignum">{{myDate | date: 'dd'}}</div>
+      <div class="date-bignum">{{now | date: 'dd'}}</div>
       <div class="date-day">
-        <p>{{myDate | date: 'EEEE'}} - {{myDate | date:'HH:mm'}}</p>
-        <h6>{{myDate | date: 'MMMM'}}/{{myDate | date: 'y'}}</h6>
+        <p>{{now | date: 'EEEE'}} - {{now | date:'HH:mm:ss'}}</p>
+        <h6>{{now | date: 'MMMM'}}/{{now | date: 'y'}}</h6>
       </div>
     </div>
     <div class="date-more"><i class="material-icons">more_vert</i></div>
@@ -21,33 +21,23 @@
         <div class="weather-today-temp">{{today.temp}}°</div>
       </div>
     </div>
-      <ng-template #placehold>Loading...</ng-template>
-      <div *ngIf="isLoaded"  class="weather-wind">
-        <div class="weather-wind-speed-wrapper">
-          <img class="weather-wind-speed-icon" src="assets/icons/003-wind-turbine.svg">
-          <div class="weather-wind-speed">{{today.windSpeed}}m/s</div>
-        </div>
-        <div class="weather-wind-direction"></div>
-        <div class="weather-wind-humidity-wrapper">
-          <img class="weather-wind-humidity-icon" src="assets/icons/001-speedometer.svg">
-          <div class="weather-wind-humidity">{{today.humidity}}%</div>
-        </div>
+    <ng-template #placehold>Loading...</ng-template>
+    <div *ngIf="isLoaded"  class="weather-wind">
+      <div class="weather-wind-speed-wrapper">
+        <img class="weather-wind-speed-icon" src="assets/icons/003-wind-turbine.svg">
+        <div class="weather-wind-speed">{{today?.windSpeed}}m/s</div>
+      </div>
+      <div class="weather-wind-direction"></div>
+      <div class="weather-wind-humidity-wrapper">
+        <img class="weather-wind-humidity-icon" src="assets/icons/001-speedometer.svg">
+        <div class="weather-wind-humidity">{{today?.humidity}}%</div>
+      </div>
     </div>
     <div *ngIf="isLoaded" class="weather-3days-wrapper">
-      <div class="weather-3days-1day">
-        <div  class="weather-3days-day">{{secondDay.day | date: 'EEEE'}}</div>
-        <div class="weather-3days-temp">{{secondDay.temp}}°</div>
-        <img [src]="secondDay.iconPath" class="weather-icon-small">
-      </div>
-      <div class="weather-3days-1day">
-        <div  class="weather-3days-day">{{thirdDay.day | date: 'EEEE'}}</div>
-        <div class="weather-3days-temp">{{thirdDay.temp}}°</div>
-        <img [src]="thirdDay.iconPath" class="weather-icon-small">
-      </div>
-      <div class="weather-3days-1day">
-        <div  class="weather-3days-day">{{forthDay.day | date: 'EEEE'}}</div>
-        <div class="weather-3days-temp">{{forthDay.temp}}°</div>
-        <img [src]="forthDay.iconPath" class="weather-icon-small">
+      <div class="weather-3days-1day" *ngFor="let day of nextDays">
+        <div  class="weather-3days-day">{{day.day | date: 'EEEE'}}</div>
+        <div class="weather-3days-temp">{{day.temp}}°</div>
+        <img [src]="day.iconPath" class="weather-icon-small">
       </div>
     </div>
   </div>

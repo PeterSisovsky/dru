@@ -2,8 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Routes, RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContentComponent } from './content/content.component';
 import { CueboxComponent } from './cuebox/cuebox.component';
@@ -12,6 +13,8 @@ import { RightnavComponent } from './rightnav/rightnav.component';
 import { ComponentMenuComponent } from './component-menu/component-menu.component';
 import { LeftnavComponent } from './leftnav/leftnav.component';
 import { MenuComponent } from './menu/menu.component';
+import { EpicFormComponent } from './epic-form/epic-form.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 
@@ -25,12 +28,29 @@ import { MenuComponent } from './menu/menu.component';
     ComponentMenuComponent,
     LeftnavComponent,
     MenuComponent,
+    EpicFormComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot([
+      {
+        path: '', component: ContentComponent
+      },
+      {
+        path: 'Dashboard', component: ContentComponent
+      },
+      {
+        path: 'Form', component: EpicFormComponent
+      },
+      {
+        path: '**', component: NotFoundComponent
+      },
+    ]),
   ],
   providers: [],
   bootstrap: [AppComponent]

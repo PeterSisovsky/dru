@@ -1,6 +1,11 @@
 <div class="wrapper">
   <div class="left-nav-wrapper">
-    <div class="logo">LOGO</div>
+    <div routerLink={{logoPath}} class="logo-wrap">
+      <div class="logo-box">
+        <div class="logo-f">F</div>
+      </div>
+      <div class="logo-text">FUSE</div>
+    </div>
     <div class="left-nav">
       <app-menu></app-menu>
     </div>
@@ -47,7 +52,7 @@
     </div>
     <div class="content-wrapper">
       <div class="component-wrapper">
-        <app-content></app-content>
+        <router-outlet></router-outlet>
       </div>
       <div class="right-nav">
         <app-rightnav></app-rightnav>
