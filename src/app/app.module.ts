@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -15,6 +15,7 @@ import { LeftnavComponent } from './leftnav/leftnav.component';
 import { MenuComponent } from './menu/menu.component';
 import { EpicFormComponent } from './epic-form/epic-form.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { GameComponent } from './game/game.component';
 
 
 
@@ -30,6 +31,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     MenuComponent,
     EpicFormComponent,
     NotFoundComponent,
+    GameComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,6 +48,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
       },
       {
         path: 'Form', component: EpicFormComponent
+      },
+      {
+        path: 'Game', component: GameComponent
       },
       {
         path: '**', component: NotFoundComponent

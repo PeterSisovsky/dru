@@ -1,0 +1,32 @@
+.player-model{
+  position: relative;
+/*  width: auto;*/
+  height: 20px;
+  background-color: #ce00c5;
+  }
+
+.enemy-model{
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: #ab6b1a;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.projectile-line{
+  display: flex;
+  top: 605px;
+  position: fixed;
+  width: auto;
+  background-color: #30cfd0;
+}
+
+.projectile-model{
+  position: relative;
+  overflow-y: hidden;
+  display: block;
+  width: 20px;
+  height: 40px;
+  background-color: coral;
+}

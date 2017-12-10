@@ -67,7 +67,7 @@ export class MenuComponent implements OnInit {
           }
         },
         {
-          title: 'Calendar',
+          title: 'Game',
           icon: 'date_range',
         },
         {
