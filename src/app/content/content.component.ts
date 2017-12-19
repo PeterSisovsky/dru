@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CueVal } from '../cuebox/cuebox.component';
-
 
 
 @Component({
@@ -9,7 +8,7 @@ import { CueVal } from '../cuebox/cuebox.component';
   styleUrls: ['./content.component.scss']
 })
 export class ContentComponent {
-  name: string;
+  name = 'John';
   menuItems = ['Home', 'Budget Summary', 'Team Members'];
   cueValues: CueVal[] = [
     {
@@ -54,15 +53,6 @@ export class ContentComponent {
     },
   ];
 
-
-
   constructor() {
-
   }
-
-  ngOnInit() {
-    console.log(this.cueValues);
-    this.name = 'John';
-  }
-
 }

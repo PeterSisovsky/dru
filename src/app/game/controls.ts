@@ -1,4 +1,3 @@
-import * as moment from 'moment';
 
 export interface PlayerModel {
   score: number;
@@ -12,9 +11,16 @@ export interface PlayerModel {
 export interface ProjectileModel {
   model: string;
   speed: number;
-  damage: number;
+  size: number;
   positionX: number;
   positionY: number;
+}
+
+export interface EnemyModel {
+  positionX: number;
+  positionY: number;
+  size: number;
+  moveOffset: number;
 }
 
 export function   movePlayer(player: PlayerModel, moveOffset: number, moveDirection: string): PlayerModel {
@@ -26,7 +32,7 @@ export function   movePlayer(player: PlayerModel, moveOffset: number, moveDirect
 }
 
 export function  shoot(player: PlayerModel): ProjectileModel {
- return {model: 'asdasda', 'speed': 10, 'damage': 10, positionX: player.positionX, positionY: 20};
+ return {model: 'projectileModel', 'speed': 10, 'size': 20, positionX: player.positionX, positionY: 605};
 }
 
 

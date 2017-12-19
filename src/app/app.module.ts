@@ -11,11 +11,11 @@ import { CueboxComponent } from './cuebox/cuebox.component';
 import { GithubComponent } from './github/github.component';
 import { RightnavComponent } from './rightnav/rightnav.component';
 import { ComponentMenuComponent } from './component-menu/component-menu.component';
-import { LeftnavComponent } from './leftnav/leftnav.component';
 import { MenuComponent } from './menu/menu.component';
 import { EpicFormComponent } from './epic-form/epic-form.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { GameComponent } from './game/game.component';
+import { CustomSelectComponent } from './custom-select/custom-select.component';
 
 
 
@@ -27,11 +27,11 @@ import { GameComponent } from './game/game.component';
     GithubComponent,
     RightnavComponent,
     ComponentMenuComponent,
-    LeftnavComponent,
     MenuComponent,
     EpicFormComponent,
     NotFoundComponent,
     GameComponent,
+    CustomSelectComponent,
   ],
   imports: [
     BrowserModule,

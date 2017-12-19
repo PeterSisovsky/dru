@@ -1,11 +1,11 @@
-.menuitems-wrap{
+.menuitems-wrap {
   display: flex;
   flex-flow: row nowrap;
   height: 40px;
   align-items: center;
 }
 
-.blue-bottom{
+.blue-bottom {
   height: 100%;
   border-bottom: solid transparent 2px;
   display: flex;
@@ -14,7 +14,7 @@
   padding-right: 10px;
 }
 
-.darkBlue-bottom{
+.darkBlue-bottom {
   color: #e8e8e8;
   height: 100%;
   border-bottom: solid transparent 2px;
@@ -24,7 +24,13 @@
   padding-right: 10px;
 }
 
+.darkBlue-bottom:hover {
+  cursor: pointer;
+  border-bottom: solid #313398 2px;
+}
+
 .blue-bottom:hover {
+  cursor: pointer;
   border-bottom: solid #58acf2 2px;
   color: #353535;
 }

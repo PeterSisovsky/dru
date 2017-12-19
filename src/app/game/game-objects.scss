@@ -1,11 +1,10 @@
-.player-model{
+.player-model {
   position: relative;
-/*  width: auto;*/
   height: 20px;
   background-color: #ce00c5;
-  }
+}
 
-.enemy-model{
+.enemy-model {
   display: block;
   width: 20px;
   height: 20px;
@@ -14,7 +13,7 @@
   margin-right: 3px;
 }
 
-.projectile-line{
+.projectile-line {
   display: flex;
   top: 605px;
   position: fixed;
@@ -22,7 +21,7 @@
   background-color: #30cfd0;
 }
 
-.projectile-model{
+.projectile-model {
   position: relative;
   overflow-y: hidden;
   display: block;

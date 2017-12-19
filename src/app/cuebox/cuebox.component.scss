@@ -1,13 +1,12 @@
 .cue-box-wrap {
-/*  display: flex;
-  justify-content: flex-start;*/
   width: 200px;
   height: 200px;
   color: #6E6E6E;
   border: solid #cdcdcd 1px;
+  margin-top: 5px;
 }
 
-.cue-header-wrap{
+.cue-header-wrap {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -16,18 +15,22 @@
   background-color: #f1f1f1;
 }
 
-.cue-header-value-wrap{
+.cue-header-value-wrap {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   margin-left: 10px;
 }
 
-.hiddenArrow{
+.cue-header-more-icon:hover{
+  cursor: pointer;
+}
+
+.hiddenArrow {
   visibility: hidden;
 }
 
-.cue-body-wrap{
+.cue-body-wrap {
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
@@ -36,7 +39,7 @@
   align-items: center;
 }
 
-.cue-body-bigValue{
+.cue-body-bigValue {
   text-align: center;
   font-size: 44px;
   margin-top: 10px;
@@ -58,11 +61,11 @@
   color: #77888F;
 }
 
-.cue-body-bigValue-info{
+.cue-body-bigValue-info {
   margin-top: 10px;
 }
 
-.cue-footer-wrap{
+.cue-footer-wrap {
   background-color: #f1f1f1;
   width: 100%;
   height: 20%;

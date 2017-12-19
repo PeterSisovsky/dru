@@ -15,10 +15,10 @@ import {
   animations: [
     trigger('moveMenu', [
       state('unrolled', style({
-        /*transform: 'translateY(-100%)',*/  height: 0, overflow: 'hidden',
+        height: 0, overflow: 'hidden',
       })),
       state('rolled', style({
-        /*transform: 'translateY(0)',*/  height: '*', overflow: 'hidden'
+        height: '*', overflow: 'hidden'
       })),
       transition('rolled <=> unrolled', animate('300ms ease-in-out')),
     ]),
@@ -160,14 +160,15 @@ export class MenuComponent implements OnInit {
       ]
     },
   ];
+
   constructor() {
   }
+
   ngOnInit() {
   }
 
   expand(status: MainMenuItemModel): void {
-    if (status.expanded == null) {
-    } else {
+    if (status.expanded !== null) {
       status.expanded = !status.expanded;
       if (status.expanded) {
         status.animationStatus = 'rolled';

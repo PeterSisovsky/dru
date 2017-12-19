@@ -10,9 +10,10 @@ export class GithubComponent implements OnInit {
 
   menuItems = ['Issues', 'Commits', 'Pull Request'];
 
-  constructor() { }
+  constructor() {
+  }
 
-  ngOnInit() {
+  ngOnInit(): any {
   }
 
 }

@@ -20,6 +20,7 @@ export interface CueVal {
 export class CueboxComponent implements OnInit {
 
   @Input() cueValues: CueVal[];
+
   constructor() {
   }
 

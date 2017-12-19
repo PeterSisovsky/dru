@@ -39,9 +39,8 @@ interface DayInfoModel {
   providers: [WeatherService],
 })
 export class RightnavComponent {
-  apiKey = '1aaa748e04abf09763b3fd31efcc9d11';
-  // apiKey = '0dbfcc400a532cb8bb560009bdc4d663';
-  weather: any = {}; // pouzit interface s necessary vecma
+  apiKey = '1aaa748e04abf09763b3fd31efcc9d11'; /* secondary apiKey = 0dbfcc400a532cb8bb560009bdc4d663 */
+  weather: any = {};
   city = 'Brno';
   code = 'CZ';
   now = Date.now();
@@ -50,7 +49,7 @@ export class RightnavComponent {
 
   constructor(private http: HttpClient) {
     this.getTime();
-    this.getWeather('Brno', 'CZ');
+    this.getWeather(this.city, this.code);
   }
 
   getTime(): void {

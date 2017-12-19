@@ -1,11 +1,10 @@
-.wrapper{
-  width:100%;
-  height: auto;
-  min-height:100%;
+.wrapper {
+  min-height: 100%;
+  flex-basis: 100%;
   display: flex;
 }
 
-.left-nav-wrapper{
+.left-nav-wrapper {
   width: 200px;
   min-width: 200px;
   min-height: 100%;
@@ -13,63 +12,66 @@
   background-color: #3C4252;
 }
 
-.main{
-  width: 100%;
-  height: auto;
+.main {
   min-height: 100%;
+  flex-basis: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.top-bar{
+.top-bar {
   display: flex;
   font-size: 14px;
-  background-color: white;
   width: 100%;
   min-width: 525px;
   height: 40px;
   min-height: 40px;
-  color: #a0a0a0;
   justify-content: space-between;
+  background-color: white;
+  color: #a0a0a0;
   border-bottom: solid #d6d6d6 1px;
 }
 
-.top-bar  *{
+.top-bar * {
   display: flex;
   flex-flow: nowrap row;
   align-items: center;
 }
 
-.top-bar-leftSide{
- width: 80%;
+.top-bar-leftSide {
+  width: 80%;
 }
 
-.top-bar-search-wrap{
+.top-bar-search-wrap {
   width: 100%;
   border-left: solid 1px #d6d6d6;
 }
 
-.top-bar-search-box{
+.top-bar-search-box {
   font-size: 12px;
 }
 
-.top-bar-rightSide{
+.top-bar-rightSide {
   min-width: 250px;
   justify-content: flex-end;
 }
 
 .top-bar-leftSide > div, .top-bar-rightSide > div {
   height: 100%;
-  /*  background-color: deeppink;*/
 }
 
-.top-bar-icon{
+.top-bar-icon {
   width: 40px;
+  min-width: 40px;
   justify-content: center;
   display: flex;
 }
 
-.top-bar-language-code, .top-bar-user-name{
+.top-bar-icon:hover {
+  cursor: pointer;
+}
+
+.top-bar-language-code, .top-bar-user-name {
   color: #6e6e6e;
 }
 
@@ -77,12 +79,13 @@
   border-right: solid 1px #d6d6d6;
 }
 
-.top-bar-language-wrap{
+.top-bar-language-wrap {
   margin-left: 10px;
   border-right: 1px solid #d6d6d6;
 }
 
-.content-wrapper{
+.content-wrapper {
+  width: 100%;
   min-width: 525px;
   height: 100%;
   background-color: #f1f1f1;
@@ -90,22 +93,22 @@
   flex-direction: row;
 }
 
-.component-wrapper{
+.component-wrapper {
   width: 100%;
   background-color: white;
   min-width: 450px;
   height: 100%;
 }
 
-.right-nav{
+.right-nav {
   width: 275px;
   min-width: 275px;
   background-color: #eeeeee;
   height: auto;
   min-height: 100%;
-  }
+}
 
-.logo-wrap{
+.logo-wrap {
   background-color: #495062;
   font-size: 14px;
   height: 40px;
@@ -115,11 +118,11 @@
   color: #f1f1f1;
 }
 
-.logo-wrap:hover{
+.logo-wrap:hover {
   cursor: pointer;
 }
 
-.logo-box{
+.logo-box {
   width: 25px;
   height: 25px;
   background-color: #58ACF2;
@@ -130,13 +133,13 @@
   margin-left: 10px;
 }
 
-.logo > *{
+.logo > * {
   color: white;
   font-family: "Bauhaus 93";
   text-decoration: none;
 }
 
-.left-nav{
+.left-nav {
   background-color: #3C4252;
 }
 
