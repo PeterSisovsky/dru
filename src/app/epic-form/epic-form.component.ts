@@ -9,7 +9,7 @@ import { passwordValidator } from '../validators/password.validator';
 })
 export class EpicFormComponent {
   rForm: FormGroup;
-  countries = ['--Select Country-', 'USA', 'Slovakia', 'Czech republic', ];
+  countries = ['--Select Country--', 'USA', 'Slovakia', 'Czech republic', ];
   constructor(private  fb: FormBuilder) {
     this.createForm();
   }
