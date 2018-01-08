@@ -1,0 +1,38 @@
+<script src="game.component.ts"></script>
+<div class="game-wrap">
+
+  <div class="game-screen">
+
+    <div class="game-score-line">
+      <div class="game-score-wrap">
+        <div class="game-score-score">{{player.score}}</div>
+        <div class="game-score-hp">❤❤❤</div>
+      </div>
+    </div>
+
+    <div class="game-screen-level">
+
+      <div class="enemy-spawn">
+
+        <div class="projectile-area">
+          <div class="enemy-line">
+            <div [ngStyle]="{left: enemy.positionX + 'px', top: enemy.positionY+ 'px'}" class="enemy-formation">
+              <div [ngStyle]="{width: enemy.size+ 'px', height: enemy.size+ 'px'}" class="boss-first"></div>
+            </div>
+          </div>
+          <div *ngFor="let projectile of activeProjectiles" [ngStyle]="{left: projectile.positionX + 'px', top: projectile.positionY + 'px'}" class="projectile-model"></div>
+        </div>
+      </div>
+
+
+      <div class="player-line">
+        <div [ngStyle]="{left: player.positionX + 'px', width: player.size+ 'px'}" class="player-model"></div>
+      </div>
+
+    </div>
+  </div>
+
+<label> controls
+  <input (keydown)="onKeydown($event)">
+  </label>
+</div>

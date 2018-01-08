@@ -1,0 +1,17 @@
+<div [ngClass]="{'blur-layer': optionsExpanded}" (click)="showOptions(true)">
+</div>
+<div class="option-wrap">
+  <div class="select-wrap">
+    <div (click)="showOptions(optionsExpanded)" class="select-butt">
+      <div class="select-butt-text">
+        {{selectedCountry}}
+      </div>
+      <div class="select-butt-icon"><i class="material-icons">arrow_drop_down</i></div>
+    </div>
+    <div class="expanded" *ngIf="optionsExpanded">
+      <div *ngFor="let listValue of list" class="select-line">
+        <div class="option-line" (click)="selectOption(listValue)">{{listValue}}</div>
+      </div>
+    </div>
+  </div>
+</div>

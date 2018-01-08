@@ -1,0 +1,57 @@
+.blur-layer {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.option-wrap {
+  display: flex;
+  width: 100%;
+  height: 39.26px;
+  flex-wrap: wrap;
+  user-select: none;
+}
+
+.option-line {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  padding: 5px;
+}
+
+.select-wrap {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.select-butt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.select-butt-text {
+  padding-left: 10px;
+}
+
+.expanded {
+  width: 100%;
+}
+
+.expanded div {
+  background-color: #f1f1f1;
+  color: #111111;
+}
+
+.expanded div:hover {
+  background-color: #bebebe;
+  color: #111111;
+}
+

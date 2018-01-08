@@ -1,0 +1,115 @@
+<div class="form-container">
+
+  <div class="form-wrap">
+
+    <form [formGroup]="rForm" novalidate>
+
+      <div class="form-text-wrap">
+
+        <h2>Sign Up for Free</h2>
+
+        <div class="form-line">
+          <div class="form-value-hint">
+            <div class="form-value">
+              <input placeholder="Username*" formControlName="userName">
+            </div>
+            <div *ngIf="(!rForm.controls['userName'].valid) && rForm.controls['userName'].touched; else placehold_name" class="form-hint">
+              User name must have at least 3 characters.
+            </div>
+            <ng-template #placehold_name>
+              <div class="form-hint-placeholder"></div>
+            </ng-template>
+          </div>
+        </div>
+
+        <div class="form-line">
+          <div class="form-value-hint">
+            <div class="form-value">
+              <input placeholder="E-mail*" formControlName="email">
+            </div>
+            <div *ngIf="(!rForm.controls['email'].valid) && rForm.controls['email'].touched; else placehold_mail" class="form-hint">
+              Email is required.
+            </div>
+            <ng-template #placehold_mail>
+              <div class="form-hint-placeholder"></div>
+            </ng-template>
+          </div>
+        </div>
+
+        <div class="form-line">
+          <div class="form-value-hint">
+            <div class="form-value">
+              <input placeholder="Password*" class="pass" formControlName="pass">
+            </div>
+            <div *ngIf="(!rForm.controls['pass'].valid) && rForm.controls['pass'].touched; else placehold_pass" class="form-hint">
+              User name must have at least 6 characters.
+            </div>
+            <ng-template #placehold_pass>
+              <div class="form-hint-placeholder"></div>
+            </ng-template>
+          </div>
+          <div class="form-value-hint">
+            <div class="form-value">
+              <input placeholder="Confirm password*" class="pass" formControlName="confirmPass">
+            </div>
+            <div *ngIf="(!rForm.controls['confirmPass'].valid) && rForm.controls['confirmPass'].touched; else placehold_confirmpass"
+                 class="form-hint">
+              Passwords must be same.
+            </div>
+            <ng-template #placehold_confirmpass>
+              <div class="form-hint-placeholder"></div>
+            </ng-template>
+          </div>
+        </div>
+
+        <div class="form-line">
+          <div class="form-value-hint">
+            <div class="form-value">
+              <input placeholder="Date of birth" formControlName="dateOfBirth">
+            </div>
+            <div class="form-hint-placeholder"></div>
+          </div>
+          <div class="form-value-hint">
+            <div class="form-value" id="sex">
+              <div class="sex">
+                <div (click)="changeToWoman(rForm.value.gender)"
+                     [ngClass]="{'sex-option-1-active': !rForm.value.gender, 'sex-option-1': rForm.value.gender }" class="sex-option-1"><i
+                  class="material-icons">directions_walk</i></div>
+                <div (click)="changeToMan(rForm.value.gender)"
+                     [ngClass]="{'sex-option-2-active': rForm.value.gender, 'sex-option-2': !rForm.value.gender }" class="sex-option-2"><i
+                  class="material-icons">pregnant_woman</i></div>
+              </div>
+            </div>
+            <div class="form-hint-placeholder"></div>
+          </div>
+        </div>
+
+        <div class="form-line">
+          <div class="form-value-hint">
+            <div class="form-value" id="zeroPadding">
+              <app-custom-select [list]="countries" formControlName="country"></app-custom-select>
+            </div>
+            <div *ngIf="(!rForm.controls['country'].valid) && rForm.controls['country'].touched; else placehold_country" class="form-hint">
+              Please select country.
+            </div>
+            <ng-template #placehold_country>
+              <div class="form-hint-placeholder"></div>
+            </ng-template>
+          </div>
+        </div>
+
+        <div class="form-line">
+          <div class="form-value-hint">
+            <div class="button-wrap">
+              <button (click)="logMe()" [disabled]="!rForm.valid">Create account</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </form>
+
+
+  </div>
+</div>
